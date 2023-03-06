@@ -1,13 +1,13 @@
-import Navbar from '@/components/navbar'
+import Navbar from "@/components/navbar";
+import SearchBar from "@/components/searchbar";
 
 export default function Search() {
-
   return (
     <>
       <Navbar />
       <main>
-        <div className="text-blue-400">SEARCH</div>
+        <SearchBar />
       </main>
     </>
-  )
+  );
 }

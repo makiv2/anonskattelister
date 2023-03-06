@@ -1,0 +1,31 @@
+.primary-search-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.primary-search-box {
+  background: hsla(0, 0%, 0%, 0.1);
+  backdrop-filter: blur(1rem);
+  transform: translateY(-5em);
+  border-radius: 5px;
+}
+
+@media (max-width: 35em) {
+  .primary-search-box {
+  }
+}
+
+@media (min-width: 35em) and (max-width: 65em) {
+  .primary-search-box {
+  }
+}
+
+@media (min-width: 35em) {
+  .primary-search-box {
+    width: clamp(20rem, 50%, 50rem);
+    height: 4.5vh;
+  }
+}
