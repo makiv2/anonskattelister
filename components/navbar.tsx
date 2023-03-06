@@ -12,7 +12,6 @@ function Navbar() {
   const navbar = useRef<HTMLDivElement>(null);
 
   const togglenav = (e: any) => {
-    e.preventDefault();
     const linkElement = e.target;
     const navbarElement = navbar.current;
     linkElement.appendChild(navbarElement);

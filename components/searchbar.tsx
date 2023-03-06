@@ -1,7 +1,7 @@
 export default function SearchBar() {
   return (
     <>
-      <div className="bg-orange-700 primary-search-div">
+      <div className="primary-search-div">
         <input
           className="primary-search-box"
           type="text"
