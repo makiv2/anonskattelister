@@ -1,27 +1,35 @@
-// A simple navbar component that navigates to the home page, search page, and about page.
-
 import Link from "next/link";
 import logo from "@/public/favicon.ico";
 import Image from "next/image";
-import { useRef } from "react";
+import { MouseEvent, useRef } from "react";
 
 function Navbar() {
   //get the element with the id of primary-navigation in the react way
   const primaryNavigation = useRef<HTMLUListElement>(null);
   const navToggle = useRef<HTMLButtonElement>(null);
 
-  //make arrow function
+  const links = useRef(new Array(3));
+  const navbar = useRef<HTMLDivElement>(null);
+
+  const togglenav = (e: any) => {
+    e.preventDefault();
+    const linkElement = e.target;
+    const navbarElement = navbar.current;
+    linkElement.appendChild(navbarElement);
+  };
+
   const testfunction = () => {
     if (primaryNavigation.current) {
-      const visibility = primaryNavigation.current.getAttribute("data-visibility");
+      const visibility =
+        primaryNavigation.current.getAttribute("data-visibility");
       console.log(visibility);
       if (visibility === "false") {
         primaryNavigation.current.setAttribute("data-visibility", "true");
         navToggle.current?.setAttribute("aria-expanded", "true");
-        } else {
+      } else {
         primaryNavigation.current.setAttribute("data-visibility", "false");
         navToggle.current?.setAttribute("aria-expanded", "false");
-        }
+      }
     }
   };
 
@@ -51,17 +59,18 @@ function Navbar() {
           className="primary-navigation flex vargap"
         >
           <li>
-            <Link href="/">
+            <Link onClick={(e) => togglenav(e)} href="/">
               <span aria-hidden="true">00</span>Hjem
             </Link>
+            <div ref={navbar} className="active-nav"></div>
           </li>
           <li>
-            <Link href="/search">
+            <Link onClick={(e) => togglenav(e)} href="/search">
               <span aria-hidden="true">01</span>Søk
             </Link>
           </li>
           <li>
-            <Link href="/about">
+            <Link onClick={(e) => togglenav(e)} href="/about">
               <span aria-hidden="true">02</span>Om
             </Link>
           </li>

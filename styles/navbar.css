@@ -2,6 +2,9 @@
 
 }
 
+span {
+    pointer-events: none;
+  }
 
 .primary-header {
     align-items: center;
@@ -23,7 +26,8 @@
 
 .primary-navigation a {
     text-decoration: none;
-
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .primary-navigation a > span {
@@ -78,6 +82,14 @@
         padding-inline: clamp(3rem, 10vw, 10rem);
         border-radius: 0.5rem;
         font-size: x-large;
+    }
+
+    .active-nav {
+        height: 4px;
+        background: #1a1919;
+        border-radius: 2rem;
+        transform: translateX(-2%) translateY(40px);
+        width: 108%;
     }
 }
 
