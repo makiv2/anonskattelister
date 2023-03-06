@@ -8,6 +8,9 @@
     justify-content: space-between;
 }
 
+.mobile-nav-toggle {
+    display: none;
+}
 
 .primary-navigation {
     list-style: none;
@@ -31,14 +34,26 @@
 
 @media (max-width: 35em) {
     .primary-navigation {
+        --gap: 2em;
         position: fixed;
         inset: 0 0 0 30%;
+        z-index: 1000;
         flex-direction: column;
         padding: min(30vh, 8rem) 2.5em;
     }
 
-    .primary-navigation li { 
-        margin-bottom: 0.75rem;
+    .mobile-nav-toggle {
+        position: absolute;
+        background: url('../images/menu.png');
+        background-position: center;
+        background-size: contain;
+        width: 2rem;
+        aspect-ratio: 1;
+        top: 3rem;
+        right: 3rem;
+        z-index: 9999;
+        background-repeat: no-repeat;
+        display: block;
     }
 }
 

@@ -13,8 +13,12 @@ function Navbar() {
         </Link>
       </div>
 
+      <button className="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+        <span className="sr-only">Menu</span>
+      </button>
+
       <nav className="font-tiltwarp text-xl">
-        <ul className="primary-navigation flex vargap">
+        <ul id="primary-navigation" className="primary-navigation flex vargap">
           <li>
             <Link href="/">
               <span aria-hidden="true">00</span>Hjem
