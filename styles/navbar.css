@@ -1,0 +1,51 @@
+.logo {
+
+}
+
+
+.primary-header {
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.primary-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    background: hsla(0, 0%, 0%, 0.1);
+    backdrop-filter: blur(1rem);
+}
+
+.primary-navigation a {
+    text-decoration: none;
+
+}
+
+.primary-navigation a > span {
+    font-weight: 700;
+    margin-inline-end: 0.75em;
+}
+
+
+@media (max-width: 35em) {
+    .primary-navigation {
+        position: fixed;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(30vh, 8rem) 2.5em;
+    }
+
+    .primary-navigation li { 
+        margin-bottom: 0.75rem;
+    }
+}
+
+
+
+
+
+.vargap {
+    gap: var(--gap, 1rem);
+}

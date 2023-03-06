@@ -18,6 +18,9 @@ export default function Home() {
 
 
       <Navbar />
+
+
+      
       <main>
         <div className="text-blue-400">test</div>
       </main>
